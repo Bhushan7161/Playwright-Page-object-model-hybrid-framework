@@ -1,4 +1,4 @@
-# Playwright Python Page Object Framework — CarWale
+# Playwright Page Object Model (Hybrid – Data-Driven + Keyword-Driven) Framework
 
 A data-driven web automation framework built with Python, Playwright, pytest, the Page Object Model (POM), Jenkins, and Allure Reports.
 
