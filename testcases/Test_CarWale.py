@@ -1,10 +1,7 @@
-import time
-
 import pytest
 
 from pages.CarBase import CarBase
 from pages.HomePage import HomePage
-from pages.NewCarsPage import NewCarsPage
 from testcases.BaseTest import BaseTest
 import allure
 
@@ -19,7 +16,6 @@ class Test_CarWale(BaseTest):
         with allure.step("*****Executing Finding New Cars Test*****"):
             home = HomePage(page)
             home.find_new_cars()
-            time.sleep(3)
 
     @allure.feature("Select Cars Test")
     @allure.severity(allure.severity_level.CRITICAL)
@@ -43,7 +39,6 @@ class Test_CarWale(BaseTest):
             print(f"Car Title is {title}")
             assert title == carTitle, "Not on the correct page as the title is not matching"
 
-            time.sleep(3)
 
     @allure.feature("Select Cars Test")
     @allure.severity(allure.severity_level.CRITICAL)
@@ -65,6 +60,6 @@ class Test_CarWale(BaseTest):
 
             title = car.get_title()
             print(f"Car Title is {title}")
-            # assert title == carTitle, "Not on the correct page as the title is not matching"
-            car.get_car_name_and_prices()
-            time.sleep(1)
+            assert title == carTitle, "Not on the correct page as the title is not matching"
+            car_details = car.get_car_name_and_prices()
+            assert car_details, f"No car names and prices were found for {carBrand}"

@@ -20,6 +20,7 @@ allure-report/
 # Playwright output
 videos/
 trace.zip
+traces/
 playwright-report/
 test-results/
 *.inspect.ndjson
