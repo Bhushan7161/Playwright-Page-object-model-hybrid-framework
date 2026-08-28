@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+allure-results/
+allure-report/
+
+# Playwright output
+videos/
+trace.zip
+playwright-report/
+test-results/
+*.inspect.ndjson
+
+# Runtime artifacts
+logs/*
+!logs/.gitkeep
+screenshot/*
+!screenshot/.gitkeep
+screenshots/
+*.log
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
